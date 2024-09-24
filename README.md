@@ -20,7 +20,7 @@
 
 ## Demo
 
-Check out the live demo of the app [here][(https://focused-app.netlify.app]).
+Check out the live demo of the app https://focused-app.netlify.app
 
 ## License
 
