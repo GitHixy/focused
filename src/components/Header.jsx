@@ -36,7 +36,7 @@ const Header = () => {
     const intervalId = setInterval(changeQuote, 10000);
 
     return () => clearInterval(intervalId);
-  }, []);
+  }, [quotes]);
 
   return (
     <header className={styles.header}>
