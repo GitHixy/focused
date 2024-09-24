@@ -1,0 +1,37 @@
+.header {
+    background-color: var(--button-bg-color); 
+    color: var(--text-color); 
+    text-align: center;
+    padding: 50px 20px;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .title {
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: var(--text-color);
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
+ 
+  .title {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0.1rem;
+    background: linear-gradient(90deg, #3498db, #9b59b6, #f1c40f);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  .fadeIn {
+    opacity: 1;
+  }
+  
+  
