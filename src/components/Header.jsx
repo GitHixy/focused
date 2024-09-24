@@ -46,11 +46,11 @@ const Header = () => {
     const intervalId = setInterval(changeQuote, 10000);
 
     return () => clearInterval(intervalId);
-  }, [quotes]);
+  }, []);
 
   return (
     <header className={styles.header}>
-      <h1 className={styles.title}>FOCUSED</h1>
+      <h1 className={styles.title}>- FOCUSED -</h1>
       <p className={`${styles.subtitle} ${fadeIn ? styles.fadeIn : ''}`}>{quote}</p> 
     </header>
   );
