@@ -89,7 +89,13 @@ const Timer = () => {
         {Math.floor(remainingTime / 60)}:{remainingTime % 60 < 10 ? '0' : ''}{remainingTime % 60}
       </h1>
       <MiniBreakTimer breakTime={appliedBreakTime} />
+      <div className={styles.buttons}>
+        <button onClick={() => dispatch(startTimer())} className={styles.start}>Start</button>
+        <button onClick={() => dispatch(pauseTimer())} className={styles.pause}>Pause</button>
+        <button onClick={() => dispatch(resetTimer())} className={styles.reset}>Reset</button>
+      </div>
 
+<div className={styles.inputContainer}>
       <div className={styles.inputGroup}>
         <label>
           <span>Set Duration:  </span>
@@ -121,10 +127,6 @@ const Timer = () => {
         <button onClick={handleSetBreakDuration} className={styles.applyButton}>Apply</button>
       </div>
 
-      <div className={styles.buttons}>
-        <button onClick={() => dispatch(startTimer())} className={styles.start}>Start</button>
-        <button onClick={() => dispatch(pauseTimer())} className={styles.pause}>Pause</button>
-        <button onClick={() => dispatch(resetTimer())} className={styles.reset}>Reset</button>
       </div>
 
       {showToast && (

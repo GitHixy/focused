@@ -12,12 +12,25 @@
   .timer {
     font-size: 6rem;
     font-weight: 300;
-    margin-bottom: 0px;
+    margin: 5px;
+  }
+
+  .inputContainer{
+    margin-block: 20px;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
   
   .buttons {
+    width: 100%;
     display: flex;
-    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
   }
   
   button {
@@ -41,6 +54,7 @@
   
   
   .start {
+    width: 100px;
     background-color: #27ae60;
     color: white;
   }
@@ -50,6 +64,8 @@
   }
   
   .pause {
+
+    width: 100px;
     background-color: #f39c12;
     color: white;
   }
@@ -59,6 +75,7 @@
   }
   
   .reset {
+    width: 100px;
     background-color: #e74c3c;
     color: white;
   }
@@ -174,10 +191,10 @@ body.dark input:checked + .slider {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 15px 0;
-  padding-bottom: 20px;
+  margin: 5px;
+  padding-block: 10px;
   text-align: center;
-  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1);
+  
 }
 
 .inputGroup label {
@@ -237,12 +254,6 @@ input[type="range"] {
     .timer {
       font-size: 4rem;
     }
-  
-    .buttons {
-      flex-direction: column;
-      gap: 10px;
-    }
-  
     button {
       width: 100%;
     }
