@@ -9,7 +9,7 @@ const Statistics = () => {
     <div className={styles.statistics}>
       <h2>-Stats-</h2>
       <p>Completed Sessions: <span>{completedSessions}</span></p>
-      <p>Total Time In Focus: <span>{Math.floor(totalFocusTime / 60)} minutes</span></p>
+      <p>Total Time In Focus: <span>{Math.floor(totalFocusTime / 60)} Minutes</span></p>
     </div>
   );
 };

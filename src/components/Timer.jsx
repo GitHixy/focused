@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { startTimer, startBreak, pauseTimer, resetTimer, completeSession, tick, setDuration, setBreakDuration } from '../redux/timerSlice';
 import styles from '../styles/Timer.module.css';
 import notification from '../assets/sounds/notification.mp3'
+import MiniBreakTimer from './MiniBreakTimer.jsx';
 
 const Timer = () => {
   const dispatch = useDispatch();
@@ -10,6 +11,7 @@ const Timer = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [sessionDuration, setSessionDuration] = useState(duration / 60);
   const [breakTime, setBreakTime] = useState(breakDuration / 60);
+  const [appliedBreakTime, setAppliedBreakTime] = useState(breakTime);
   const [toastMessage, setToastMessage] = useState(''); 
   const [showToast, setShowToast] = useState(false);
 
@@ -60,6 +62,7 @@ const Timer = () => {
   const handleSetBreakDuration = () => {
     const newBreakDurationInSeconds = breakTime * 60;
     dispatch(setBreakDuration(newBreakDurationInSeconds));
+    setAppliedBreakTime(breakTime);
   };
   
   const playSound = () => {
@@ -85,29 +88,35 @@ const Timer = () => {
       <h1 className={styles.timer}>
         {Math.floor(remainingTime / 60)}:{remainingTime % 60 < 10 ? '0' : ''}{remainingTime % 60}
       </h1>
+      <MiniBreakTimer breakTime={appliedBreakTime} />
 
       <div className={styles.inputGroup}>
         <label>
-          Set Duration (minutes):
+          <span>Set Duration:  </span>
           <input
-            type="number"
+            type="range"
             value={sessionDuration}
             onChange={(e) => setSessionDuration(e.target.value)}
             min="1"
+            max="120"
+            
           />
+          <span>{sessionDuration} Minutes </span>
         </label>
         <button onClick={handleSetSessionDuration} className={styles.applyButton}>Apply</button>
       </div>
 
       <div className={styles.inputGroup}>
         <label>
-          Set Break (minutes):
+        <span>Set Break:  </span>
           <input
-            type="number"
+            type="range"
             value={breakTime}
             onChange={(e) => setBreakTime(e.target.value)}
             min="1"
+            max="30"
           />
+          <span>{breakTime} Minutes </span>
         </label>
         <button onClick={handleSetBreakDuration} className={styles.applyButton}>Apply</button>
       </div>
