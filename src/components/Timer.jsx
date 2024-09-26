@@ -99,6 +99,7 @@ const Timer = () => {
       <div className={styles.inputGroup}>
         <label>
           <span>Set Duration:  </span>
+          <span>{sessionDuration} Minutes </span>
           <input
             type="range"
             value={sessionDuration}
@@ -107,7 +108,7 @@ const Timer = () => {
             max="120"
             
           />
-          <span>{sessionDuration} Minutes </span>
+          
         </label>
         <button onClick={handleSetSessionDuration} className={styles.applyButton}>Apply</button>
       </div>
@@ -115,6 +116,7 @@ const Timer = () => {
       <div className={styles.inputGroup}>
         <label>
         <span>Set Break:  </span>
+        <span>{breakTime} Minutes </span>
           <input
             type="range"
             value={breakTime}
@@ -122,7 +124,7 @@ const Timer = () => {
             min="1"
             max="30"
           />
-          <span>{breakTime} Minutes </span>
+          
         </label>
         <button onClick={handleSetBreakDuration} className={styles.applyButton}>Apply</button>
       </div>
