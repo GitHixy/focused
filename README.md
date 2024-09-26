@@ -22,10 +22,3 @@
 
 Check out the live demo of the app on https://focused-app.netlify.app
 
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
-
----
-
-Feel free to explore, contribute, and customize the app to fit your needs!
