@@ -191,7 +191,7 @@ body.dark input:checked + .slider {
 }
 
 input[type="range"] {
-  width: 100px;
+  width: 200px;
   border: 1px solid #000000;
   border-radius: 4px;
   margin-inline: 20px;
